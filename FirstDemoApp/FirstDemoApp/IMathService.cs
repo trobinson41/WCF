@@ -17,6 +17,9 @@ namespace FirstDemoApp
 
         [OperationContract]
         Complex AddComplex(Complex c1, Complex c2);
+
+        [OperationContract]
+        int GetCounter();
     }
 
     [DataContract]

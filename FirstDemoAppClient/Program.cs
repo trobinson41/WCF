@@ -21,6 +21,7 @@ namespace FirstDemoAppClient
         {
             localhost.MathServiceClient mc = new localhost.MathServiceClient();
             Console.WriteLine("10 + 5 = " + mc.Add(10, 5));
+            Console.WriteLine("10 + 5 = " + mc.Add(10, 5));
             localhost.Complex c1 = new localhost.Complex();
             c1.Real = 10;
             c1.Imag = 5;
@@ -28,6 +29,7 @@ namespace FirstDemoAppClient
             c2.Real = 5;
             c2.Imag = -7;
             Console.WriteLine($"{PrintComplex(c1)} + {PrintComplex(c2)} = {PrintComplex(mc.AddComplex(c1, c2))}");
+            Console.WriteLine("Count: " + mc.GetCounter());
 
             Console.ReadLine();
         }

@@ -6,33 +6,28 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 
-namespace FirstDemoApp
+namespace WcfService1
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
-    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
-    public class MathService : IMathService
+    public class Service1 : IService1
     {
-        int Count;
-
-        public int Add(int a, int b)
+        public string GetData(int value)
         {
-            Count++;
-            return a + b;
+            return string.Format("You entered: {0}", value);
         }
 
-        public Complex AddComplex(Complex c1, Complex c2)
+        public CompositeType GetDataUsingDataContract(CompositeType composite)
         {
-            Count++;
-            Complex c = new Complex();
-            c.Real = c1.Real + c2.Real;
-            c.Imag = c1.Imag + c2.Imag;
-            return c;
-        }
-
-        public int GetCounter()
-        {
-            return Count;
+            if (composite == null)
+            {
+                throw new ArgumentNullException("composite");
+            }
+            if (composite.BoolValue)
+            {
+                composite.StringValue += "Suffix";
+            }
+            return composite;
         }
     }
 }
