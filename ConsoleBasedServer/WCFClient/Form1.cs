@@ -28,5 +28,15 @@ namespace WCFClient
         {
             txtResult.Text = ms.Sub(int.Parse(txtN1.Text), int.Parse(txtN2.Text)).ToString();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ms.ClientStarted(System.Security.Principal.WindowsIdentity.GetCurrent().Name);
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ms.ClientStopped(System.Security.Principal.WindowsIdentity.GetCurrent().Name);
+        }
     }
 }

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFLibrary", "WCFLibrary.csproj", "{CF9504A8-0D16-47CC-BF44-91A5F213D97E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFServer", "..\WCFServer\WCFServer.csproj", "{D7CAF204-FB5B-4DF4-9482-F325B4BAAA11}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF9504A8-0D16-47CC-BF44-91A5F213D97E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF9504A8-0D16-47CC-BF44-91A5F213D97E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF9504A8-0D16-47CC-BF44-91A5F213D97E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF9504A8-0D16-47CC-BF44-91A5F213D97E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7CAF204-FB5B-4DF4-9482-F325B4BAAA11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7CAF204-FB5B-4DF4-9482-F325B4BAAA11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7CAF204-FB5B-4DF4-9482-F325B4BAAA11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7CAF204-FB5B-4DF4-9482-F325B4BAAA11}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

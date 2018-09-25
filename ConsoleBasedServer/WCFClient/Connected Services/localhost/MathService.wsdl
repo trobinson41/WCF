@@ -6,6 +6,12 @@
       <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/WCFLibrary/MathService/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IMathService_ClientStarted_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClientStarted" />
+  </wsdl:message>
+  <wsdl:message name="IMathService_ClientStopped_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClientStopped" />
+  </wsdl:message>
   <wsdl:message name="IMathService_Add_InputMessage">
     <wsdl:part name="parameters" element="tns:Add" />
   </wsdl:message>
@@ -19,6 +25,12 @@
     <wsdl:part name="parameters" element="tns:SubResponse" />
   </wsdl:message>
   <wsdl:portType name="IMathService">
+    <wsdl:operation name="ClientStarted">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMathService/ClientStarted" message="tns:IMathService_ClientStarted_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClientStopped">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMathService/ClientStopped" message="tns:IMathService_ClientStopped_InputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="Add">
       <wsdl:input wsaw:Action="http://tempuri.org/IMathService/Add" message="tns:IMathService_Add_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IMathService/AddResponse" message="tns:IMathService_Add_OutputMessage" />
@@ -30,6 +42,18 @@
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IMathService" type="tns:IMathService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ClientStarted">
+      <soap:operation soapAction="http://tempuri.org/IMathService/ClientStarted" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="ClientStopped">
+      <soap:operation soapAction="http://tempuri.org/IMathService/ClientStopped" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
     <wsdl:operation name="Add">
       <soap:operation soapAction="http://tempuri.org/IMathService/Add" style="document" />
       <wsdl:input>

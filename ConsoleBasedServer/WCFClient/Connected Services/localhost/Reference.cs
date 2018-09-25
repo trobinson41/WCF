@@ -15,6 +15,18 @@ namespace WCFClient.localhost {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="localhost.IMathService")]
     public interface IMathService {
         
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IMathService/ClientStarted")]
+        void ClientStarted(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IMathService/ClientStarted")]
+        System.Threading.Tasks.Task ClientStartedAsync(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IMathService/ClientStopped")]
+        void ClientStopped(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IMathService/ClientStopped")]
+        System.Threading.Tasks.Task ClientStoppedAsync(string name);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMathService/Add", ReplyAction="http://tempuri.org/IMathService/AddResponse")]
         int Add(int a, int b);
         
@@ -53,6 +65,22 @@ namespace WCFClient.localhost {
         
         public MathServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        public void ClientStarted(string name) {
+            base.Channel.ClientStarted(name);
+        }
+        
+        public System.Threading.Tasks.Task ClientStartedAsync(string name) {
+            return base.Channel.ClientStartedAsync(name);
+        }
+        
+        public void ClientStopped(string name) {
+            base.Channel.ClientStopped(name);
+        }
+        
+        public System.Threading.Tasks.Task ClientStoppedAsync(string name) {
+            return base.Channel.ClientStoppedAsync(name);
         }
         
         public int Add(int a, int b) {

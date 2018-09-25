@@ -11,9 +11,12 @@ namespace WCFLibrary
     [ServiceContract]
     public interface IMathService
     {
+        [OperationContract(IsOneWay = true)]
+        void ClientStarted(string name);
+        [OperationContract(IsOneWay = true)]
+        void ClientStopped(string name);
         [OperationContract]
         int Add(int a, int b);
-
         [OperationContract]
         int Sub(int a, int b);
     }

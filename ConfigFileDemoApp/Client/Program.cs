@@ -10,7 +10,7 @@ namespace Client
     {
         static void Main(string[] args)
         {
-            localhost.Service1Client s = new localhost.Service1Client();
+            localhost.Service1Client s = new localhost.Service1Client("MyTcpBinding_IService1");
             Console.WriteLine(s.GetData(10));
             localhost.CompositeType c1 = new localhost.CompositeType();
             c1.BoolValue = false;

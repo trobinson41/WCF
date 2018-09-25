@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8a5032ba-5134-4b90-9397-49cbfcd938c2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8731/Design_Time_Addresses/BusinessObjects/ExceptionDemoService/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ExceptionDemoService.wsdl" MetadataType="Wsdl" ID="2dcb9487-e479-4601-ac48-47f0da5cb045" SourceId="1" SourceUrl="http://localhost:8731/Design_Time_Addresses/BusinessObjects/ExceptionDemoService/?wsdl" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="3e2df4c4-dd56-45cf-b3db-510fcf731acb" SourceId="1" SourceUrl="http://localhost:8731/Design_Time_Addresses/BusinessObjects/ExceptionDemoService/?disco" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="d5c8f2b1-5222-4b3b-ad15-193eb77da361" SourceId="1" SourceUrl="http://localhost:8731/Design_Time_Addresses/BusinessObjects/ExceptionDemoService/?xsd=xsd1" />
+    <MetadataFile FileName="item11.xsd" MetadataType="Schema" ID="bf665e06-a9b0-4d97-b56d-4de55d2f0ae2" SourceId="1" SourceUrl="http://localhost:8731/Design_Time_Addresses/BusinessObjects/ExceptionDemoService/?xsd=xsd2" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="afcda4cd-e9bf-44a4-85a1-98ac6c9ce370" SourceId="1" SourceUrl="http://localhost:8731/Design_Time_Addresses/BusinessObjects/ExceptionDemoService/?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
