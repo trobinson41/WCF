@@ -12,12 +12,14 @@ namespace Client
         {
             using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Required))
             {
-                localhost.AccoutServiceClient proxy = new Client.localhost.AccoutServiceClient();
+                localhost.AccoutServiceClient proxy = new localhost.AccoutServiceClient();
                 proxy.Deposit(1, 500);
-                proxy.Withdraw(2, 500);
-                
+                proxy.Withdraw(2);
+                Console.WriteLine(proxy.GetCounter());
+                proxy.Close();
                 ts.Complete();
             }
+            Console.ReadKey();
         }
     }
 }

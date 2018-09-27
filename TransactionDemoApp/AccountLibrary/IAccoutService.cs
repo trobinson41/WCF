@@ -8,7 +8,7 @@ using System.Text;
 namespace AccountLibrary
 {
     // NOTE: If you change the interface name "IService1" here, you must also update the reference to "IService1" in App.config.
-    [ServiceContract()]
+    [ServiceContract(SessionMode=SessionMode.Required)]
     public interface IAccoutService
     {
         [OperationContract()]
@@ -17,8 +17,9 @@ namespace AccountLibrary
 
         [OperationContract]
         [TransactionFlow(TransactionFlowOption.Mandatory)]
-        void Withdraw(int accountId, decimal amount);
-    }
+        void Withdraw(int accountId);
 
-    
+        [OperationContract]
+        int GetCounter();
+    }
 }
